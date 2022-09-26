@@ -1,0 +1,2 @@
+# angularStructure
+Angular folder structure
