@@ -1,1 +1,14 @@
-<h1>Testing</h1>
+
+<h1>Pokemon list</h1>
+<div class="pokemon">
+    <p *ngFor="let item of response">{{item.name}}</p>
+</div>
+
+
+<h1>Dog data</h1>
+
+<div>
+    <button (click)="getTestDataDog()">Refrescar</button>
+    <p>{{responseDog.status}}</p>
+    <img src="{{responseDog.message}}" alt="">
+</div>
