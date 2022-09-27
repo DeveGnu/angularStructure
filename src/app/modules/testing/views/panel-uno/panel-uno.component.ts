@@ -57,4 +57,16 @@ export class PanelUnoComponent implements OnInit {
     console.log('redirectr')
     this.router.navigate([`testing/${role}`])
   }
+
+  get isAdmin() {
+    const role = localStorage.getItem('angular-testing-role');
+    return role === 'admin';
+  }
+
+  public getCarts() {
+    this.testingService.getCarts('1', ({ message, data }) => {
+      alert(message);
+      console.log(data);
+    })
+  }
 }

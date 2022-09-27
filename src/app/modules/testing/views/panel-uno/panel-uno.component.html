@@ -1,4 +1,4 @@
-
+<!--
 <h1>Pokemon list</h1>
 <div class="pokemon">
     <p *ngFor="let item of response">{{item.name}}</p>
@@ -25,6 +25,8 @@
 
 <br><br>
 
+<h1 *ngIf="isAdmin">Eres administrador! <3 </h1>
+
 <div *ngIf="isLogged">
   <button (click)="logout()">Cerrar sesión</button>
 </div>
@@ -40,3 +42,7 @@
 
 <button (click)="redirect('admin')" style="margin-left: 20px; margin-right: 20px;">Panel administrador</button>
 <button (click)="redirect('user')" style="margin-left: 20px; margin-right: 20px;">Panel usuario</button>
+
+ -->
+
+ <button (click)="getCarts()">Get Carts</button>

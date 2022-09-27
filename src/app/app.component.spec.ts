@@ -22,20 +22,33 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AngularStructure');
   });
 
-  it('should render title', () => {
+  it(`Debe mostrar un titulo 'APPMODULE!'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const htmlContainer = fixture.nativeElement as HTMLElement;
 
-    expect(compiled.querySelector('h1')?.textContent).toContain('APP MODULE!');
+    expect(htmlContainer.querySelector('#title')?.textContent).toEqual('APP MODULES!');
   });
 
-  it('should show hello alert', () => {
+  it(`Muestra alert hello`, () => {
     const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+
     const component = fixture.componentInstance;
-    const spy = spyOn(component, "hello");
-    component.ngOnInit()
+
+    const spy = spyOn(component, 'hello');
+    component.ngOnInit();
 
     expect(spy).toHaveBeenCalled();
-  });
+  })
 });
+
+it(`Funcion regresa lo que deberia`, () => {
+  const fixture = TestBed.createComponent(AppComponent);
+  fixture.detectChanges();
+  const component = fixture.componentInstance;
+
+  const text = component.test();
+
+  expect(text).toEqual('Text test');
+})

@@ -7,11 +7,16 @@ export class AdminGuard implements CanActivate {
   canActivate(): boolean {
     const role = localStorage.getItem('angular-testing-role');
 
-    console.log(role)
     if (role === 'admin') {
       return true;
     }
-    alert("No tienes permiso de entrar a este panel");
+
+    if(!role) {
+      alert("Inicie sesión antes de ingresar al panel");
+    } else {
+      alert("No tienes permiso de entrar a este panel");
+    }
+
     return false;
   }
 }

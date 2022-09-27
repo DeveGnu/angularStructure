@@ -4,5 +4,5 @@ export const environment = {
   app_client_id: '5d9c0467dd0b194a9b19fec9',
   APP_VERSION: '2.0.0.0',
   TEST_SERVICE:'http://pokeapi.co/api/v2/pokemon',
-  TEST_SERVICE_DOG:'http://dog.ceo/api/breeds/image/random'
+  TEST_SERVICE_DOG:'http://dog.ceo/api/breeds/image/random',
 };

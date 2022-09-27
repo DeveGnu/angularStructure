@@ -13,10 +13,10 @@ export class AppComponent {
   }
 
   public hello() {
-    // alert('Test Hello');
+    alert('Test Hello');
   }
 
   public test() {
-    return 'test texts';
+    return 'Text test';
   }
 }

@@ -18,6 +18,6 @@ export class YesNoModalComponent implements OnInit {
   }
 
   public onClick(option: boolean) {
-    this.isAccept.emit(option ? "Sí" : "No");
+    this.isAccept.emit(option ? "Sipi" : "Nopi");
   }
 }
