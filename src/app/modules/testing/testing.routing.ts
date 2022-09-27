@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PanelUnoComponent } from './views/panel-uno/panel-uno.component';
+import { PanelDosComponent } from './views/panel-dos/panel-dos.component';
+import { AdminGuard } from 'src/app/core/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -14,8 +16,13 @@ const routes: Routes = [
       {
         path: 'Uno',
         component: PanelUnoComponent,
-      },
+      }
     ],
+  },
+  {
+    path: 'admin',
+    component: PanelDosComponent,
+    canActivate: [AdminGuard]
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

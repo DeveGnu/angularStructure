@@ -26,6 +26,25 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('AngularStructure app is running!');
+
+    expect(compiled.querySelector('h1')?.textContent).toContain('APP MODULE!');
   });
+
+  it('should show hello alert', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
+    const spy = spyOn(component, "hello");
+    component.ngOnInit()
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should return test text', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
+    const text = component.test();
+
+    expect(text).toEqual('test text');
+  });
+
 });

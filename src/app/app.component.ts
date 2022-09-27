@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularStructure';
+
+  ngOnInit() {
+    this.hello();
+  }
+
+  public hello() {
+    // alert('Test Hello');
+  }
+
+  public test() {
+    return 'test texts';
+  }
 }

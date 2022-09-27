@@ -1,11 +1,23 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-// Guards
-// Interceptors
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './interceptors/test.interceptor';
+import { AdminGuard } from './guards/admin.guard';
+
 
 @NgModule({
   imports: [HttpClientModule],
   providers: [
+    AdminGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyInterceptor,
+      multi: true,
+    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: InterceptorTwo,
+    //   multi: true,
+    // }
   ],
   declarations: [
   ],

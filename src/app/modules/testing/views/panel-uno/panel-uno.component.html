@@ -12,3 +12,31 @@
     <p>{{responseDog.status}}</p>
     <img src="{{responseDog.message}}" alt="">
 </div>
+
+<br>
+
+<hr>
+
+<br>
+
+<button (click)="showModal = !showModal">Mostrar </button>
+<br>
+<app-yes-no-modal *ngIf="showModal" (isAccept)="acceptBtn($event)"></app-yes-no-modal>
+
+<br><br>
+
+<div *ngIf="isLogged">
+  <button (click)="logout()">Cerrar sesión</button>
+</div>
+
+<br>
+
+<div *ngIf="!isLogged">
+  <button (click)="login('admin')" style="margin-left: 20px; margin-right: 20px;">Entrar como administrador</button>
+  <button (click)="login('user')" style="margin-left: 20px; margin-right: 20px;">Entrar como usuario</button>
+</div>
+
+<br><hr><br>
+
+<button (click)="redirect('admin')" style="margin-left: 20px; margin-right: 20px;">Panel administrador</button>
+<button (click)="redirect('user')" style="margin-left: 20px; margin-right: 20px;">Panel usuario</button>

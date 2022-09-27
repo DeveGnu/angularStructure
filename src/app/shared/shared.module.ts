@@ -1,12 +1,14 @@
-// Angular 
+// Angular
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-// Installed modules 
+import { YesNoModalComponent } from './components/yes-no-modal/yes-no-modal.component';
+
+// Installed modules
 // Custom components
 // Pipes
-// Installed pipes 
+// Installed pipes
 // Custom pipes
 
 @NgModule({
@@ -17,7 +19,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
   ],
   declarations: [
-    // Custom components 
+    YesNoModalComponent
+    // Custom components
     //ScrollProgressBarComponent,
     // pipes
     // Custom pipes
@@ -27,10 +30,11 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    YesNoModalComponent,
     //Custom components
     //ScrollProgressBarComponent,
     // Installed pipes
-    // Custom pipes 
+    // Custom pipes
   ]
 })
 export class SharedModule {}
