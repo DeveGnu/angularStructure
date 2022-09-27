@@ -38,13 +38,4 @@ describe('AppComponent', () => {
 
     expect(spy).toHaveBeenCalled();
   });
-
-  it('should return test text', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const component = fixture.componentInstance;
-    const text = component.test();
-
-    expect(text).toEqual('test text');
-  });
-
 });
